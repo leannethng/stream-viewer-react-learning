@@ -4,20 +4,24 @@ import api from '../api';
 
 function Games(){
   const [games, setGames] = useState([]);
+  
 
   useEffect(() => {
     const fetchData = async () => {
+     
       const result = await api.get('https://api.twitch.tv/helix/games/top');
-      console.log(result.data);
+      // console.log(result.data.data);
       let dataArray = result.data.data
+      // return dataArray
       let finalArray = dataArray.map(game => {
         let newURL = game.box_art_url
         .replace('{width}', '300')
         .replace('{height}', '300');
         game.box_art_url = newURL;
+        
         return game;
       })
-      setGames(result.data.data);
+      setGames(finalArray);
     };
     fetchData();
   }, []);
