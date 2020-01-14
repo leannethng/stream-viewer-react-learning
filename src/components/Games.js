@@ -15,8 +15,8 @@ function Games(){
       // return dataArray
       let finalArray = dataArray.map((game) => {
         let newURL = game.box_art_url
-        .replace('{width}', '300')
-        .replace('{height}', '300');
+        .replace('{width}', '285')
+        .replace('{height}', '380');
         game.box_art_url = newURL;
         
         return game;
@@ -42,18 +42,30 @@ function Games(){
         <div className='card-group d-flex flex-wrap  '>
            {/* {gameKeys}  */}
            {games.map(game => (
-            <div key={game.id} className=" col-lg-4 col-md-4 col-md-1 col-sm-6 mt-5 ">
-              <div className="card text-center">
-                <img className="card-img-top" src={game.box_art_url} />
-                <div className="card-body">
-                  <h5 className="card-title">{game.name}</h5>
-                
+            <div key={game.id} className=" col-xl-2 col-lg-3 col-md-4 col-md-1 col-sm-6 mt-5 mb-5">
+              <div className="card bg-transparent border-0 text-center" >
+                <div className="stream">
+                  <Link
+                    className="card-link d-block text-truncate stream__thumbnail"
+                    to={{
+                      pathname: "game/" + game.name,
+                      state: {
+                        gameID: game.id
+                      }
+                    }}
+                  >
+                    <img className=" card-img-top " src={game.box_art_url} />
+                  </Link>
                 </div>
-                <div className="card-footer">
-                    <button className="btn btn-success">
+                {/* <div className="card-body ">
+                  <h5 className="card-title d-block text-truncate">{game.name}</h5>
+                
+                </div> */}
+                <div className="card-body text-left">
+                    {/* <button className="btn btn-success "> */}
                       {/* Creating dynamic link */}
                       <Link
-                        className="link"
+                        className="card-link d-block text-truncate"
                         to={{
                           pathname: "game/" + game.name,
                           state: {
@@ -63,8 +75,8 @@ function Games(){
                       >
                         {game.name} streams{" "}
                       </Link>
-                    </button>
-                  </div>
+                    {/* </button> */}
+                </div>
               </div>
             </div>
           ))};
