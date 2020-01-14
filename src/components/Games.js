@@ -39,29 +39,32 @@ function Games(){
   return (
     <div>
       <h1>Most Popular Games</h1>
-        <div className='row'>
+        <div className='card-group d-flex flex-wrap  '>
            {/* {gameKeys}  */}
            {games.map(game => (
-            <div key={game.id} className="col-lg-4 col-md-6 col-sm-12 mt-5">
-              <div className="card">
+            <div key={game.id} className=" col-lg-4 col-md-4 col-md-1 col-sm-6 mt-5 ">
+              <div className="card text-center">
                 <img className="card-img-top" src={game.box_art_url} />
                 <div className="card-body">
                   <h5 className="card-title">{game.name}</h5>
-                  <button className="btn btn-success">
-                    {/* Creating dynamic link */}
-                    <Link
-                      className="link"
-                      to={{
-                        pathname: "game/" + game.name,
-                        state: {
-                          gameID: game.id
-                        }
-                      }}
-                    >
-                      {game.name} streams{" "}
-                    </Link>
-                  </button>
+                
                 </div>
+                <div className="card-footer">
+                    <button className="btn btn-success">
+                      {/* Creating dynamic link */}
+                      <Link
+                        className="link"
+                        to={{
+                          pathname: "game/" + game.name,
+                          state: {
+                            gameID: game.id
+                          }
+                        }}
+                      >
+                        {game.name} streams{" "}
+                      </Link>
+                    </button>
+                  </div>
               </div>
             </div>
           ))};

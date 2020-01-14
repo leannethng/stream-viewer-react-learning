@@ -9,3 +9,7 @@
 .link:hover {
   color: #fff;
 }
+
+.card {
+  height: 100%;
+}

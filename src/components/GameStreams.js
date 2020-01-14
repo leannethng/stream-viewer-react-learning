@@ -30,14 +30,18 @@ useEffect(() =>{
   };
 
   fetchData();
-});
+}, [location.state.gameID]);
 
   return(
     <div>
       {/* id is being called from the link name on App.js */}
-      <li>{match.params.id}</li>
+      {/* <li>{match.params.id}</li> */}
       {/* igameID is being called from the state declared in the Games.js file */}
-      <li>{location.state.gameID}</li>
+      {/* <li>{location.state.gameID}</li> */}
+      {/* Checking the data is working */}
+      {/* <li>{viewers}</li> */}
+
+      
     </div>
   );
 }
