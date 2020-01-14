@@ -48,6 +48,7 @@ function Games(){
                 <div className="card-body">
                   <h5 className="card-title">{game.name}</h5>
                   <button className="btn btn-success">
+                    {/* Creating dynamic link */}
                     <Link
                       className="link"
                       to={{
@@ -72,4 +73,4 @@ function Games(){
  
 }
 
-export default Games
+export default Games;

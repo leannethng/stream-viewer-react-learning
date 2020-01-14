@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 function Streams(){
   return(
@@ -6,4 +6,4 @@ function Streams(){
   )
 }
 
-export default Streams
+export default Streams;

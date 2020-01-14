@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Header from './components/Header';
 import Games from './components/Games';
+import GameStreams from './components/GameStreams';
 import Stream from './components/Streams';
 
 import './App.css';
@@ -18,6 +19,7 @@ function App() {
      
       <Route exact path = '/' component={Games}/>
       <Route exact path = '/top-streams' component={Stream}/>
+      <Route exact path = '/game/:id' component={GameStreams}/>
     </Router>
   );
 }
