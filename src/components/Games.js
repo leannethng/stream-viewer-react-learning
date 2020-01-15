@@ -37,14 +37,14 @@ function Games(){
   // const gameKeys = 
 
   return (
-    <div>
-      <h1>Most Popular Games</h1>
-        <div className='card-group d-flex flex-wrap  '>
+    <div className="container">
+      <h1 className="text-light ">Top Streams</h1>
+        <div className='card-group d-flex flex-wrap'>
            {/* {gameKeys}  */}
            {games.map(game => (
-            <div key={game.id} className=" col-xl-2 col-lg-3 col-md-4 col-md-1 col-sm-6 mt-5 mb-5">
-              <div className="card bg-transparent border-0 text-center" >
-                <div className="stream">
+            <div key={game.id} className=" col-xl-2 col-lg-3 col-md-4 col-md-1 col-sm-6 mt-5">
+              <div className="card bg-transparent border-0" >
+                
                   <Link
                     className="card-link d-block text-truncate stream__thumbnail"
                     to={{
@@ -56,16 +56,12 @@ function Games(){
                   >
                     <img className=" card-img-top " src={game.box_art_url} />
                   </Link>
-                </div>
-                {/* <div className="card-body ">
-                  <h5 className="card-title d-block text-truncate">{game.name}</h5>
                 
-                </div> */}
-                <div className="card-body text-left">
-                    {/* <button className="btn btn-success "> */}
+                
+                 
                       {/* Creating dynamic link */}
-                      <Link
-                        className="card-link d-block text-truncate"
+                      <p
+                        className="card-text text-light d-block text-truncate mt-2"
                         to={{
                           pathname: "game/" + game.name,
                           state: {
@@ -74,9 +70,9 @@ function Games(){
                         }}
                       >
                         {game.name} streams{" "}
-                      </Link>
-                    {/* </button> */}
-                </div>
+                      </p>
+               
+                
               </div>
             </div>
           ))};
