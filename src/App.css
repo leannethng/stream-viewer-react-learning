@@ -19,10 +19,13 @@
 }
 .nav-style:hover {
   color: #9147ff;
+  text-decoration: none;
 }
 
-.nav-style:active {
+.nav-style.active {
   color: #9147ff;
+  padding-bottom: 0.5em;
+  border-bottom: #9147ff solid;
 }
 
 /* Twitch hover effect from https://stackoverflow.com/questions/58251373/isometric-45-degree-long-diagonal-shadow-on-hover-using-css-or-clip-path*/
