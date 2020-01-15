@@ -14,6 +14,12 @@
   background-color: #000;
 }
 
+/* Header.js */
+.navbar {
+  background-color: #18181b;
+  height: 50px;
+}
+
 .nav-style {
   color: aliceblue;
 }
@@ -24,8 +30,14 @@
 
 .nav-style.active {
   color: #9147ff;
-  padding-bottom: 0.5em;
+  padding-bottom: 0.4em;
   border-bottom: #9147ff solid;
+}
+
+/* Games.js */
+
+.container {
+  padding-top: 70px;
 }
 
 /* Twitch hover effect from https://stackoverflow.com/questions/58251373/isometric-45-degree-long-diagonal-shadow-on-hover-using-css-or-clip-path*/

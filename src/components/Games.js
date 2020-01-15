@@ -38,7 +38,7 @@ function Games(){
 
   return (
     <div className="container">
-      <h1 className="text-light ">Top Streams</h1>
+      <h1 className="text-light display-4 font-weight-bold">Top Games</h1>
         <div className='card-group d-flex flex-wrap'>
            {/* {gameKeys}  */}
            {games.map(game => (
@@ -61,7 +61,7 @@ function Games(){
                  
                       {/* Creating dynamic link */}
                       <p
-                        className="card-text text-light d-block text-truncate mt-2"
+                        className="card-text text-light font-weight-bold d-block text-truncate mt-2"
                         to={{
                           pathname: "game/" + game.name,
                           state: {
