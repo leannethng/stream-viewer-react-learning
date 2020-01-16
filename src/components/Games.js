@@ -42,7 +42,7 @@ function Games(){
         <div className='card-group d-flex flex-wrap'>
            {/* {gameKeys}  */}
            {games.map(game => (
-            <div key={game.id} className=" col-xl-2 col-lg-3 col-md-4 col-md-1 col-sm-6 mt-5">
+            <div key={game.id} className=" col-xl-2 col-lg-3 col-md-4  col-sm-6 mt-5">
               <div className="card bg-transparent border-0" >
                 
                   <Link
@@ -71,8 +71,6 @@ function Games(){
                       >
                         {game.name} streams{" "}
                       </p>
-               
-                
               </div>
             </div>
           ))};

@@ -5,9 +5,11 @@ import Games from './components/Games';
 import GameStreams from './components/GameStreams';
 import Stream from './components/Streams';
 
+
+import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
-import "bootstrap/dist/css/bootstrap.min.css"
-// import "shards-ui/dist/css/shards.min.css"
+
+
 
 
 function App() {
