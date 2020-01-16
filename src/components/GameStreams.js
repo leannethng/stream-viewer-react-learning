@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import { Link } from 'react-router-dom';
 import api from '../api';
 import Streams from './Streams';
 
@@ -42,16 +43,22 @@ useEffect(() =>{
       // {/* Checking the data is working */}
       // {/* <li>{viewers}</li> */}
       <div className="container">
-        
+
         <h1 className="text-light display-4 font-weight-bold"> {match.params.id} Streams</h1>
         <h3 className="text-light  font-weight-bold"> {viewers} currently watching {match.params.id}</h3>
         <div className='card-group d-flex flex-wrap'>
            {/* {gameKeys}  */}
            {streamData.map(stream => (
-            <div key={stream.id} className=" col-xl-3 col-lg-4 col-md-6  col-sm-6 mt-5">
-              <div className="card bg-transparent border-0" >
-
-                <img className=" card-img-top stream__thumbnail" src={stream.thumbnail_url} />
+            <div key={stream.id} className=" col-xl-3 col-lg-4 col-md-6 col-sm-6 mt-5">
+              <div className="card bg-transparent border-0" >                  
+              <a
+                    className="card-link d-block text-truncate stream__thumbnail"
+                    href={ "http://twitch.tv/" + stream.user_name}
+                    target = "_blank"
+                    
+                  >
+                <img className=" card-img-top" src={stream.thumbnail_url} />
+                </a>
                 <p className="card-text text-light font-weight-bold d-block text-truncate mt-2">{stream.user_name}</p>
                 <p className="card-text text-light">{stream.viewer_count} Live Viewers</p>
                       
