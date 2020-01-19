@@ -59,7 +59,8 @@ useEffect(() =>{
                   >
                 <img className=" card-img-top" src={stream.thumbnail_url} />
                 </a>
-                <p className="card-text text-light font-weight-bold d-block text-truncate mt-2">{stream.user_name}</p>
+              
+                <p className="card-subtitle text-light font-weight-bold d-block text-truncate mt-2">{stream.user_name}</p>
                 <p className="card-text text-light">{stream.viewer_count} Live Viewers</p>
                       
               </div>

@@ -5,10 +5,8 @@ import api from '../api';
 function Games(){
   const [games, setGames] = useState([]);
   
-
   useEffect(() => {
     const fetchData = async () => {
-     
       const result = await api.get('https://api.twitch.tv/helix/games/top');
       // console.log(result.data.data);
       let dataArray = result.data.data
@@ -18,6 +16,9 @@ function Games(){
         .replace('{width}', '285')
         .replace('{height}', '380');
         game.box_art_url = newURL;
+        
+        // make the viewer api call here inside the map of game
+
         
         return game;
       });
@@ -56,7 +57,6 @@ function Games(){
                   >
                     <img className=" card-img-top " src={game.box_art_url} />
                   </Link>
-                
                 
                  
                       {/* Creating dynamic link */}

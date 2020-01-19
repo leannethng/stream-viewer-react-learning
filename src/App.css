@@ -44,6 +44,10 @@
 
 /* Twitch hover effect from https://stackoverflow.com/questions/58251373/isometric-45-degree-long-diagonal-shadow-on-hover-using-css-or-clip-path*/
 
+.card-img,
+.card-img-top {
+  border-radius: 0%;
+}
 .stream__thumbnail {
   transition: 0.1s ease;
 }
