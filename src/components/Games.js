@@ -68,6 +68,7 @@ function Games(){
                             gameID: game.id
                           }
                         }}
+                        
                       >
                         {game.name} streams{" "}
                       </p>
