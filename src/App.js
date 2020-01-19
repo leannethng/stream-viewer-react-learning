@@ -17,11 +17,11 @@ function App() {
     <Router>
       <div className="App text-light">
         <Header />
-      </div>
-     
+      </div>  
       <Route exact path = '/' component={Games}/>
       <Route exact path = '/top-streams' component={Stream}/>
       <Route exact path = '/game/:id' component={GameStreams}/>
+     
     </Router>
   );
 }

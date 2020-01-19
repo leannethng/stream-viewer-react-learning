@@ -11,7 +11,7 @@ function GameStreams({match, location}){
 useEffect(() =>{
   const fetchData = async () => {
     const result = await api.get(
-      `https://api.twitch.tv/helix/streams?game_id${location.state.gameID}`
+      `https://api.twitch.tv/helix/streams?game_id=${location.state.gameID}`
     );
     let dataArray =  result.data.data;
     let finalArray = dataArray.map(stream => {
@@ -20,7 +20,6 @@ useEffect(() =>{
         .replace('{height}', '248');
         stream.thumbnail_url = newURL;
         return stream;
-      
     });
 
     let totalViewers = finalArray.reduce((acc, val) => {
@@ -61,7 +60,7 @@ useEffect(() =>{
                 </a>
               
                 <p className="card-subtitle text-light font-weight-bold d-block text-truncate mt-2">{stream.user_name}</p>
-                <p className="card-text text-light">{stream.viewer_count} Live Viewers</p>
+                <p className="card-text text-white-50">{stream.viewer_count} Live Viewers</p>
                       
               </div>
             </div>
