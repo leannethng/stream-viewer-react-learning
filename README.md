@@ -1,3 +1,8 @@
+
+![Screen Capture of App](https://github.com/leannethng/stream-viewer-react-learning/blob/master/stream-viewer.gif)
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
