@@ -9,6 +9,9 @@
 .link:hover {
   color: #fff;
 } */
+body {
+  background-color: rgb(9, 9, 9);
+}
 
 #root {
   background-color: rgb(9, 9, 9);
