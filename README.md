@@ -15,7 +15,7 @@ REACT_APP_API_KEY=XXXXXXXXXXXXXXXX
 
 #### Notes:
 * Created with help from [this tutorial](https://www.youtube.com/watch?v=VTY6ZzDTV3A)
-* Styling heavily altered with inspiration from the Twitch client.
+* Styling heavily customized with inspiration from the Twitch client.
 
 #### Learnt:
 * Basic React concepts - creating components, state, and props
