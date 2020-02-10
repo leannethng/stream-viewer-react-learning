@@ -3,6 +3,16 @@
 
 
 
+
+* To demo this you will need to register for a Twitch ClientID. [Instructions are here](https://dev.twitch.tv/docs/api)
+* Once you have the client ID, create a .env file in the root of the project and add a line with the Client ID:
+
+```
+REACT_APP_API_KEY=XXXXXXXXXXXXXXXX
+```
+* After running `npm install` in the root folder to grab the dependances, you should then be able to run this on a local server using `npm start`.
+
+-----
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
